@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PS</title>
+    <link rel="stylesheet" href="./ps.css" />
+  </head>
+  <body>
+    <div class="cover">
+      <div class="containernav">
+        <nav>
+          <a href="../../index.html">OS Virtual LAB</a>
+          <div class="nav-links" id="navLinks">
+            <ul>
+              <li><a href="../../index.html">HOME</a></li>
+              <li><a href="../../docs.html">DOCS</a></li>
+              <li><a href="../index.html">SIMULATOR</a></li>
+              <li><a href="../../about.html">ABOUT</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+      <div class="containercontent">
+        <h1>PP Scheduler</h1>
+        <!-- <h3 style="margin-top: 10px;">Type the values in the table</h3> -->
+        <p style="margin-top: 10px">
+          <b>AT:</b> Arrival Time , <b>BT:</b> Burst Time , <b>P:</b> Priority ,
+          <b>ST:</b> Start Time , <b>CT:</b> Completion Time ,
+          <b>RT:</b> Response Time , <b>WT:</b> Waiting Time , <b>TAT:</b> Turn
+          Around Time
+        </p>
+      </div>
+
+      <div class="visualizer">
+        <div class="error">Invalid Input</div>
+        <div class="container">
+          <div>
+            <div class="buttons">
+              <div class="play">
+                RUN
+                <i
+                  class="fa-solid fa-play"
+                  style="margin-left: 2px; text-align: center"
+                ></i>
+              </div>
+              <div class="reset">
+                RST
+                <i
+                  class="fa-solid fa-rotate-right"
+                  style="margin-left: 2px; text-align: center"
+                ></i>
+              </div>
+            </div>
+            <div class="hp">
+              Highest Priority:
+              <input type="text" id="hp" placeholder=" Enter" />
+            </div>
+            <div class="lp">
+              Lowest Priority:
+              <input type="text" id="lp" placeholder=" Enter" />
+            </div>
+            <div class="avg-tat">Average TAT : <span>0</span></div>
+            <div class="avg-wt">Average WT : <span>0</span></div>
+            <div class="avg-rt">Average RT : <span>0</span></div>
+          </div>
+          <div>
+            <div class="add-process">
+              <div class="input">
+                <div class="p">
+                  <label for="priority">Priority :</label>
+                  <input type="text" id="priority" placeholder=" Enter here" />
+                </div>
+                <div class="arrival">
+                  <label
+                    style="margin-left: 5px; margin-right: 5px"
+                    for="arrival-time"
+                    >Arrival Time :</label
+                  >
+                  <input
+                    type="text"
+                    id="arrival-time"
+                    placeholder=" Enter here"
+                  />
+                </div>
+
+                <div class="burst">
+                  <label for="burst-time">Burst Time :</label>
+                  <input
+                    type="text"
+                    id="burst-time"
+                    placeholder=" Enter here"
+                  />
+                </div>
+              </div>
+              <div class="add add-btn">
+                ADD
+                <i
+                  class="fa-solid fa-plus"
+                  style="margin-left: 2px; text-align: center"
+                ></i>
+              </div>
+            </div>
+
+            <div class="table">
+              <table>
+                <thead>
+                  <tr>
+                    <th>PID</th>
+                    <th>AT</th>
+                    <th>BT</th>
+                    <th>P</th>
+                    <th>ST</th>
+                    <th>CT</th>
+                    <th>RT</th>
+                    <th>WT</th>
+                    <th>TAT</th>
+                    <th><i class="fa-solid fa-trash-can"></i></th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="chart">
+        <h2
+          class="gantt"
+          style="display: none; margin-left: 20px; margin-bottom: 0"
+        >
+          Gantt Chart
+        </h2>
+        <table id="am">
+          <tr id="row1"></tr>
+          <tr id="row2"></tr>
+        </table>
+      </div>
+      <div class="barchart" id="container"></div>
+
+      <footer style="height: 10px"></footer>
+    </div>
+
+    <script src="https://cdn.anychart.com/releases/8.0.0/js/anychart-base.min.js"></script>
+    <script src="./ps.js"></script>
+    <script
+      src="https://kit.fontawesome.com/bc13a2057a.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

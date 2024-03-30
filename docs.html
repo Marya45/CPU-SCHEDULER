@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OS Virtual LAB FOR SCHEDULING ALGORITHMS</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="cover">
+      <div class="container">
+        <nav>
+          <h1><a href="index.html">OS Virtual LAB</a></h1>
+          <div class="nav-links" id="navLinks">
+            <ul>
+              <li><a href="index.html">HOME</a></li>
+              <li><a href="docs.html">DOCS</a></li>
+              <li><a href="./schedulingalgos/index.html">SIMULATOR</a></li>
+              <li><a href="about.html">ABOUT</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+      <div class="card-container">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <h1>First-Come First-Serve</h1>
+              <h2>(FCFS)</h2>
+              <p
+                style="
+                  text-align: left;
+                  margin-left: 5px;
+                  margin-right: 5px;
+                  margin-top: 5px;
+                  text-align: justify;
+                "
+              >
+                FCFS CPU Scheduling algorithm is one of the simplest and most
+                intuitive scheduling methods used in operating systems. It
+                operates on the principle that processes are executed in the
+                order they arrive in the ready queue.
+              </p>
+            </div>
+            <div class="flip-card-back">
+              <h2>Some important points</h2>
+              <ul
+                style="
+                  text-align: left;
+                  margin-top: 5px;
+                  margin-right: 5px;
+                  text-align: justify;
+                "
+              >
+                <li
+                  style="margin-left: 15px; margin-right: 5px; margin-top: 5px"
+                >
+                  The process that arrives first is the first to be executed by
+                  the CPU.
+                </li>
+                <li
+                  style="margin-left: 15px; margin-right: 5px; margin-top: 5px"
+                >
+                  Once a process starts execution, it continues until it
+                  completes its entire burst time or voluntarily yields the CPU.
+                </li>
+                <li
+                  style="margin-left: 15px; margin-right: 5px; margin-top: 5px"
+                >
+                  FCFS is a non-preemptive scheduling algorithm, meaning that
+                  once a process begins execution, it cannot be interrupted
+                  until it finishes or gives up the CPU.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <h1>Shortest Job First</h1>
+              <h2>(SJF)</h2>
+              <p
+                style="
+                  text-align: left;
+                  margin-left: 5px;
+                  margin-right: 5px;
+                  margin-top: 5px;
+                  text-align: justify;
+                "
+              >
+                SJF is an algorithm in which the process having the smallest
+                execution time is chosen for the next execution. It
+                significantly reduces the average waiting time for other
+                processes awaiting execution.
+              </p>
+            </div>
+            <div class="flip-card-back">
+              <h2>Some important points</h2>
+              <ul
+                style="
+                  text-align: left;
+                  margin-top: 5px;
+                  margin-right: 5px;
+                  text-align: justify;
+                "
+              >
+                <li
+                  style="margin-left: 15px; margin-right: 5px; margin-top: 5px"
+                >
+                  It aims to minimize the average waiting time for processes in
+                  the queue by executing the shortest job next.
+                </li>
+                <li
+                  style="margin-left: 15px; margin-right: 5px; margin-top: 5px"
+                >
+                  SJF is a non-preemptive scheduling algorithm, meaning that
+                  once a process begins execution, it cannot be interrupted
+                  until it finishes or gives up the CPU.
+                </li>
+                <li
+                  style="margin-left: 15px; margin-right: 5px; margin-top: 5px"
+                >
+                  SJF scheduling may lead to a starvation problem with long
+                  turnaround times and requires the burst time of jobs to be
+                  predetermined, which can be challenging to estimate
+                  accurately.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <h1>Longest Job First</h1>
+              <h2>(LJF)</h2>
+              <p
+                style="
+                  text-align: left;
+                  margin-left: 5px;
+                  margin-right: 5px;
+                  margin-top: 5px;
+                  text-align: justify;
+                "
+              >
+                LJF is a CPU scheduling algorithm that prioritizes processes
+                based on their burst time. In LJF, the processes with the
+                largest burst time are given priority over the shorter ones.
+              </p>
+            </div>
+            <div class="flip-card-back">
+              <h2>Some important points</h2>
+              <ul
+                style="
+                  text-align: left;
+                  margin-top: 5px;
+                  margin-right: 5px;
+                  text-align: justify;
+                "
+              >
+                <li
+                  style="margin-left: 15px; margin-right: 5px; margin-top: 5px"
+                >
+                  LJF is the opposite of the Shortest Job First (SJF) algorithm,
+                  where it focuses on executing the longest processes first,
+                  which can lead to longer waiting times for shorter processes.
+                </li>
+                <li
+                  style="margin-left: 15px; margin-right: 5px; margin-top: 5px"
+                >
+                  LJF scheduling is not commonly used in practice due to its
+                  tendency to favor longer processes over shorter ones, which
+                  can result in inefficiencies and potential starvation for
+                  shorter jobs.
+                </li>
+                <li
+                  style="margin-left: 15px; margin-right: 5px; margin-top: 5px"
+                >
+                  It is a non-preemptive scheduling algorithm, i.e. once a
+                  process begins execution, it cannot be interrupted until it
+                  finishes or gives up the CPU.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-container">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <h1>Round Robbin</h1>
+              <h2>(RR)</h2>
+              <p
+                style="
+                  text-align: left;
+                  margin-left: 5px;
+                  margin-right: 5px;
+                  margin-top: 5px;
+                  text-align: justify;
+                "
+              >
+                Round-robin scheduling is a CPU scheduling algorithm where time
+                slices are assigned to each process in equal portions and in
+                circular order, handling all processes without priority.
+              </p>
+            </div>
+            <div class="flip-card-back">
+              <h2>Some important points</h2>
+              <ul
+                style="
+                  text-align: left;
+                  margin-top: 5px;
+                  margin-right: 5px;
+                  text-align: justify;
+                "
+              >
+                <li
+                  style="margin-left: 15px; margin-right: 5px; margin-top: 5px"
+                >
+                  It is a preemptive algorithm where each process is given a
+                  fixed time quantum to execute before being interrupted and
+                  moved to the back of the ready queue.
+                </li>
+                <li
+                  style="margin-left: 15px; margin-right: 5px; margin-top: 5px"
+                >
+                  It is simple, easy-to-implement, and starvation-free algorithm
+                  that ensures fair CPU time allocation among processes by
+                  allowing each process to have a turn in a cyclic manner.
+                </li>
+                <li
+                  style="margin-left: 15px; margin-right: 5px; margin-top: 5px"
+                >
+                  This algorithm ensures that no process monopolizes the CPU and
+                  that all processes get a fair share of CPU time.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <h1>Shortest Remaining</h1>
+              <h1>Job First</h1>
+              <h2>(SRJF)</h2>
+              <p
+                style="
+                  text-align: left;
+                  margin-left: 5px;
+                  margin-right: 5px;
+                  margin-top: 5px;
+                  text-align: justify;
+                "
+              >
+                Shortest Remaining Job First is the preemptive version of
+                Shortest Job Next (SJN) algorithm, where the processor is
+                allocated to the job closest to completion. SRJF prioritizes
+                executing the process with the smallest remaining execution
+                time.
+              </p>
+            </div>
+            <div class="flip-card-back">
+              <h2>Some important points</h2>
+              <ul
+                style="
+                  text-align: left;
+                  margin-top: 5px;
+                  margin-right: 5px;
+                  text-align: justify;
+                "
+              >
+                <li
+                  style="margin-left: 15px; margin-right: 5px; margin-top: 5px"
+                >
+                  SRJF is a preemptive scheduling algorithm where the process
+                  with the smallest remaining execution time is selected for
+                  execution.
+                </li>
+                <li
+                  style="margin-left: 15px; margin-right: 5px; margin-top: 5px"
+                >
+                  It aims to minimize the average waiting time by prioritizing
+                  the process with the shortest remaining time, leading to
+                  efficient CPU utilization.
+                </li>
+                <li
+                  style="margin-left: 15px; margin-right: 5px; margin-top: 5px"
+                >
+                  SRJF scheduling can prevent longer processes from monopolizing
+                  the CPU, promoting fairness and responsiveness in process
+                  execution.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <h1>Preemptive Priority Scheduling</h1>
+              <h2>(PPS)</h2>
+              <p
+                style="
+                  text-align: left;
+                  margin-left: 5px;
+                  margin-right: 5px;
+                  margin-top: 5px;
+                  text-align: justify;
+                "
+              >
+                In this Scheduling, at the time of arrival of a process in the
+                ready queue, its Priority is compared with the priority of the
+                other processes present in the ready queue as well as with the
+                one which is being executed by the CPU at that point of time.
+                The One with the highest priority among all the available
+                processes will be given the CPU next.
+              </p>
+            </div>
+            <div class="flip-card-back">
+              <h2>Some important points</h2>
+              <ul
+                style="
+                  text-align: left;
+                  margin-top: 5px;
+                  margin-right: 5px;
+                  text-align: justify;
+                "
+              >
+                <li
+                  style="margin-left: 15px; margin-right: 5px; margin-top: 5px"
+                >
+                  Processes are assigned priority levels, and the CPU executes
+                  the process with the highest priority first. If a process with
+                  a higher priority arrives, it can preempt the currently
+                  running process.
+                </li>
+                <li
+                  style="margin-left: 15px; margin-right: 5px; margin-top: 5px"
+                >
+                  One of the advantages of this Scheduling is its ability to
+                  prioritize critical tasks effectively, especially in real-time
+                  systems and multimedia applications.
+                </li>
+                <li
+                  style="margin-left: 15px; margin-right: 5px; margin-top: 5px"
+                >
+                  A potential disadvantage of this algorithm is the risk of
+                  lower priority processes being starved if higher priority
+                  tasks continuously arrive, impacting fairness in process
+                  execution.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer style="height: 20px"></footer>
+    </div>
+  </body>
+</html>

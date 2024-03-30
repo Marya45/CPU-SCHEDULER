@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OS Virtual LAB FOR SCHEDULING ALGORITHMS</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="cover">
+      <div class="container">
+        <nav>
+          <h1><a href="index.html">OS Virtual LAB</a></h1>
+          <div class="nav-links" id="navLinks">
+            <ul>
+              <li><a href="../index.html">HOME</a></li>
+              <li><a href="../docs.html">DOCS</a></li>
+              <li><a href="./index.html">SIMULATOR</a></li>
+              <li><a href="../about.html">ABOUT</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+      <section class="accordion">
+        <input type="checkbox" name="collapse" id="handle1" /><!-- checked="checked"*/ -->
+        <h2 class="handle">
+          <label for="handle1"
+            >First Come First Serve (FCFS)
+            <a style="float: right" class="hero-btn" href="./fcfs/fcfs.html"
+              >Simulator</a
+            >
+          </label>
+        </h2>
+        <div class="content">
+          <p><strong>Algorithm:</strong></p>
+          <p style="margin-top: 2px">
+            (i) Input the number of processes required to be scheduled using
+            FCFS, burst time for each process and its arrival time.
+          </p>
+          <p style="margin-top: 2px">
+            (ii) Sort the all given processes in ascending order according to
+            arrival time in a ready queue.
+          </p>
+          <p style="margin-top: 2px">
+            (iii) Calculate the Finish Time, Turn Around Time and Waiting Time
+            for each process which in turn help to calculate Average Waiting
+            Time and Average Turn Around Time required by CPU to schedule given
+            set of process using FCFS.
+          </p>
+        </div>
+      </section>
+
+      <section class="accordion">
+        <input type="checkbox" name="collapse" id="handle2" />
+        <h2 class="handle">
+          <label for="handle2"
+            >Shortest Job First (SJF)
+            <a style="float: right" class="hero-btn" href="./sjf/sjf.html"
+              >Simulator</a
+            >
+          </label>
+        </h2>
+        <div class="content">
+          <p><strong>Algorithm:</strong></p>
+          <p style="margin-top: 2px">
+            (i) Sort all the process according to the arrival time.
+          </p>
+          <p style="margin-top: 2px">
+            (ii) Then select that process which has minimum arrival time and
+            minimum Burst time.
+          </p>
+          <p style="margin-top: 2px">
+            (iii) After completion of process make a pool of process which after
+            till the completion of previous process and select that process
+            among the pool which is having minimum Burst time.
+          </p>
+        </div>
+      </section>
+
+      <section class="accordion">
+        <input type="checkbox" name="collapse" id="handle3" />
+        <h2 class="handle">
+          <label for="handle3"
+            >Longest Job First (LJF)
+            <a style="float: right" class="hero-btn" href="./ljf/ljf.html"
+              >Simulator</a
+            >
+          </label>
+        </h2>
+        <div class="content">
+          <p><strong>Algorithm:</strong></p>
+          <p style="margin-top: 2px">
+            (i) Sort the processes in increasing order of their arrival time.
+          </p>
+          <p style="margin-top: 2px">
+            (ii) Choose the process having highest Burst Time among all the
+            processes that have arrived till that time.
+          </p>
+          <p style="margin-top: 2px">
+            (iii) Then process it for its burst time. Check if any other process
+            arrives until this process completes execution.
+          </p>
+          <p style="margin-top: 2px">
+            (iv) Repeat the above steps until all the processes are executed.
+          </p>
+        </div>
+      </section>
+
+      <section class="accordion">
+        <input type="checkbox" name="collapse" id="handle4" />
+        <h2 class="handle">
+          <label for="handle4"
+            >Shortest Remaining Job First (SRJF)
+            <a style="float: right" class="hero-btn" href="./srjf/srjf.html"
+              >Simulator</a
+            >
+          </label>
+        </h2>
+        <div class="content">
+          <p><strong>Algorithm:</strong></p>
+          <p style="margin-top: 2px">
+            (i) Sort the processes in increasing order of their arrival time.
+          </p>
+          <p style="margin-top: 2px">
+            (ii) Choose the process having least arrival time with least Burst
+            Time.
+          </p>
+          <p style="margin-top: 2px">
+            (iii) Process it for 1 unit. Check if any other process arrives upto
+            that time of execution or not.
+          </p>
+          <p style="margin-top: 2px">
+            (iv) Repeat the above steps until all the processes are executed.
+          </p>
+        </div>
+      </section>
+
+      <section class="accordion">
+        <input type="checkbox" name="collapse" id="handle5" />
+        <h2 class="handle">
+          <label for="handle5"
+            >Priority Scheduling (Preemptive)
+            <a style="float: right" class="hero-btn" href="./ps/ps.html"
+              >Simulator</a
+            >
+          </label>
+        </h2>
+        <div class="content">
+          <p><strong>Algorithm:</strong></p>
+          <p style="margin-top: 2px">
+            (i) The processes are called according to their increasing arrival
+            time.
+          </p>
+          <p style="margin-top: 2px">
+            (ii) If the new process arrived in the ready queue has a higher
+            priority than the currently running process, then the incoming new
+            process with higher priority is executed.
+          </p>
+          <p style="margin-top: 2px">
+            (iii) Once all the processes get available in the ready queue, the
+            algorithm will behave as a non-preemptive priority.
+          </p>
+        </div>
+      </section>
+
+      <section class="accordion">
+        <input type="checkbox" name="collapse" id="handle6" />
+        <h2 class="handle">
+          <label for="handle6"
+            >Round Robbing (RR)
+            <a style="float: right" class="hero-btn" href="./rr/rr.html"
+              >Simulator</a
+            >
+          </label>
+        </h2>
+        <div class="content">
+          <p><strong>Algorithm:</strong></p>
+          <p style="margin-top: 2px">
+            (i) All the processes are organized in the ready queue based on the
+            arrival time. To execute the CPU processes, a queue based on FIFO is
+            used.
+          </p>
+          <p style="margin-top: 2px">
+            (ii) Push the first process from ready queue for the task to be
+            executed for the allotted time.
+          </p>
+          <p style="margin-top: 2px">
+            (iii) The process runs for the allocated time even if the process
+            doesn't reach completion, still it is stopped by the process in
+            queue until the arrival time for the next process is reached.
+          </p>
+          <p style="margin-top: 2px">
+            (iv) In a similar manner, another process is selected by the ready
+            queue to execute its task.
+          </p>
+          <p style="margin-top: 2px">
+            (v) The above steps are repeated until all processes are finished.
+          </p>
+        </div>
+      </section>
+
+      <footer style="height: 10px"></footer>
+    </div>
+  </body>
+</html>

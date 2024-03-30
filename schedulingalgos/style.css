@@ -1,0 +1,136 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  overflow-x: hidden;
+  background-color: white;
+}
+
+.cover {
+  min-height: 100vh;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(../cover10.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.container {
+  display: flex;
+  height: 60px;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-box {
+  text-align: center;
+  margin-top: 20px;
+}
+
+nav {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+  position: relative;
+}
+
+nav ul li a {
+  font-size: 18px;
+}
+
+nav ul li a:hover {
+  border-bottom: 2px solid red;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+
+
+.accordion>input[type="checkbox"] {
+  position: absolute;
+  left: -100vw;
+}
+
+.accordion .content {
+  overflow-y: hidden;
+  height: 0;
+  transition: height 0.3s ease;
+}
+
+.accordion>input[type="checkbox"]:checked~.content {
+  height: auto;
+  overflow: visible;
+}
+
+.accordion label {
+  display: block;
+}
+
+.accordion {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  margin-left: 2em;
+  margin-right: 2em;
+  border-radius: 5px;
+}
+
+.accordion>input[type="checkbox"]:checked~.content {
+  padding: 15px;
+  border-top: 0;
+}
+
+.accordion .handle {
+  margin: 0;
+  font-size: 1.125em;
+  line-height: 1.2em;
+}
+
+.accordion label {
+  cursor: pointer;
+  font-weight: normal;
+  padding: 15px;
+}
+
+section {
+  color: white;
+  border: 1px solid white;
+}
+
+.accordion .handle label:before {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: .58em;
+  line-height: 1.556em;
+  vertical-align: middle;
+}
+
+
+.hero-btn {
+  display: inline-block;
+  text-decoration: none;
+  border: 1px solid #fff;
+  position: relative;
+  padding: 1px 5px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.hero-btn:hover {
+  border: 1px solid red;
+  background: red;
+  transition: 0.7s;
+}

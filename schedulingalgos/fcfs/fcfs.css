@@ -1,0 +1,257 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100vw;
+    overflow-x: hidden;
+    color: white;
+}
+
+.containernav {
+    display: flex;
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+}
+
+.containercontent {
+    text-align: center;
+    margin-top: 10px;
+    color: white;
+}
+
+nav {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+    position: relative;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a {
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    border-bottom: 2px solid red;
+}
+
+.cover {
+    min-height: 100vh;
+    height: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(../../cover10.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.visualizer {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 30px 20px 20px;
+    justify-content: center;
+    color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+
+.error {
+    background-color: red;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 5px;
+    display: none;
+    color: white;
+    font-weight: 600;
+}
+
+.container {
+    padding: 10px 30px 10px 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    min-height: 300px;
+}
+
+.container>div:first-child {
+    width: 20%;
+    color: white;
+    position: relative;
+    font-size: 16px;
+}
+
+.container>div:first-child>.buttons {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+
+.container>div:first-child>.buttons>div {
+    border: 2px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 150px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin: 10px;
+}
+
+.container>div:first-child>.buttons>div:hover {
+    background-color: white;
+    color: black;
+}
+
+.container>div:first-child>div:not(:first-child) {
+    border: 2px solid white;
+    border-radius: 5px;
+    margin: 20px 10px;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    padding: 10px;
+    font-weight: 500;
+}
+
+.container>div:first-child>div:not(:first-child)>span {
+    font-weight: 400;
+}
+
+.container>div:last-child {
+    width: 80%;
+}
+
+.container>div:last-child>.add-process {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid white;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.container>div:last-child>.add-process>.input {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container>div:last-child>.add-process>.input>div {
+    display: flex;
+    align-items: center;
+    margin: 0px 30px;
+}
+
+.container>div:last-child>.add-process>.input>div>label {
+    margin: 5px;
+    font-weight: 500;
+}
+
+.container>div:last-child>.add-process>.input>div>input {
+    margin: 5px 0px;
+    border: 1px solid white;
+    border-radius: 0;
+    padding: 3px;
+    font-size: 16px;
+    width: 120px;
+    display: flex;
+    border-radius: 5px;
+    background: none;
+    color: white;
+}
+
+::placeholder {
+    color: white;
+    opacity: 0.5;
+}
+
+.container>div:last-child>.add-process>.input>div>input:focus,
+.container>div:last-child>.add-process>.input>div>textarea:focus,
+.container>div:last-child>.add-process>.input>div>select:focus {
+    outline: none;
+}
+
+.container>div:last-child>.add-process>.add {
+    border: 2px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Work Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin: 10px;
+    color: white;
+}
+
+.container>div:last-child>.add-process>.add:hover {
+    background-color: #099126;
+}
+
+.table {
+    color: white;
+    margin: 10px 10px 10px 10px;
+}
+
+.table>table {
+    width: 100%;
+}
+
+.table>table,
+th,
+td {
+    border: 2px solid white;
+    border-collapse: collapse;
+}
+
+.table>table>thead>tr>th {
+    width: 9.5%;
+    font-weight: 600;
+    padding: 5px;
+}
+
+.table>table>tbody>tr>td {
+    text-align: center;
+    padding: 5px;
+}
+
+.table>table>tbody>tr>td.del {
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.table>table>tbody>tr>td.del:hover {
+    background-color: red;
+}
+
+
+#container {
+    margin: 0px 45px 20px 20px;
+    border-radius: 5px;
+    background-color: white;
+}
